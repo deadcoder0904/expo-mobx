@@ -12,6 +12,7 @@ import {
 import playerStore from './store/player'
 
 const gray = {
+  500: '#A0AEC0',
   700: '#4A5568',
   800: '#2D3748',
 }
@@ -61,7 +62,7 @@ class App extends React.Component {
             onPress={i => {
               this.routeIndex = i
             }}
-            selectedButtonStyle={{ backgroundColor: gray[700] }}
+            selectedButtonStyle={{ backgroundColor: gray[500] }}
             selectedIndex={this.routeIndex}
             buttons={['Playing 11', 'Extras']}
           />
@@ -70,6 +71,8 @@ class App extends React.Component {
               key={player.id}
               title={player.name}
               titleStyle={{
+                fontWeight: player.extra ? '300' : '500',
+                color: player.extra ? gray[500] : gray[800],
                 textDecorationLine: player.extra ? 'line-through' : 'none',
                 textDecorationStyle: 'solid',
               }}

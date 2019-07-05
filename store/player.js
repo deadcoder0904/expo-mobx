@@ -15,22 +15,22 @@ class Player {
 
 class PlayersList {
   @observable players = [
+    new Player('Rohit Sharma', false),
     new Player('Virendra Sehwag'),
     new Player('Sachin Tendulkar'),
     new Player('Sourav Ganguly'),
+    new Player('Ramesh Kamble', false),
     new Player('Rahul Dravid'),
     new Player('VVS Laxman'),
     new Player('MS Dhoni'),
-    new Player('Mohammad Kaif'),
+    new Player('Mohammad Kaif', false),
+    new Player('Lakshimapathy Balaji', false),
     new Player('Yuvraj Singh'),
     new Player('Harbhajan Singh'),
     new Player('Anil Kumble'),
     new Player('Zaheer Khan'),
     new Player('Ashish Nehra'),
-    new Player('Lakshimapathy Balaji'),
-    new Player('Ramesh Kamble'),
-    new Player('Virat Kohli'),
-    new Player('Rohit Sharma'),
+    new Player('Virat Kohli', false),
   ]
 
   @action

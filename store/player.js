@@ -4,12 +4,12 @@ import { v4 } from 'uuid'
 class Player {
   @observable id
   @observable name
-  @observable extras
+  @observable extra
 
-  constructor(name, extras = false) {
+  constructor(name, extra = false) {
     this.id = v4()
     this.name = name
-    this.extras = extras
+    this.extra = extra
   }
 }
 
@@ -42,17 +42,17 @@ class PlayersList {
   @action
   toggleExtra(id) {
     const index = this.players.findIndex(player => player.id === id)
-    this.players[index].extras = !this.players[index].extras
+    this.players[index].extra = !this.players[index].extra
   }
 
   @computed
   get dream11() {
-    return this.players.filter(player => !player.extras)
+    return this.players.filter(player => !player.extra)
   }
 
   @computed
   get extras() {
-    return this.players.filter(player => player.extras)
+    return this.players.filter(player => player.extra)
   }
 }
 

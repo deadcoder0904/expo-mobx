@@ -71,7 +71,7 @@ class App extends React.Component {
               key={player.id}
               title={player.name}
               titleStyle={{
-                textDecorationLine: player.extras ? 'line-through' : 'none',
+                textDecorationLine: player.extra ? 'line-through' : 'none',
                 textDecorationStyle: 'solid',
               }}
               onPress={() => {

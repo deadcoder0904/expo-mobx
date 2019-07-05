@@ -24,7 +24,6 @@ class App extends React.Component {
 
   render() {
     const { playerStore } = this.props
-    const routes = ['Playing 11', 'Extras']
     const playersList =
       this.routeIndex === 0 ? playerStore.dream11 : playerStore.extras
     return (
@@ -64,7 +63,7 @@ class App extends React.Component {
             }}
             selectedButtonStyle={{ backgroundColor: gray[700] }}
             selectedIndex={this.routeIndex}
-            buttons={routes}
+            buttons={['Playing 11', 'Extras']}
           />
           {playersList.map(player => (
             <ListItem
